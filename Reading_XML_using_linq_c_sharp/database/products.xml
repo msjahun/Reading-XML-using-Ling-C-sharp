@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<products>
+  <product id="p1">
+    <name>Product 1</name>
+  <price currency="USD">1000</price>
+  </product>  
+
+  <product id="p2">
+    <name>Product 2</name>
+  <price currency="EUR">2000</price>
+  </product>  
+
+  <product id="p3">
+    <name>Product 3</name>
+  <price currency="NGN">100</price>
+  </product>  
+
+  <product id="p4">
+    <name>Product 4</name>
+  <price currency="TRY">1000</price>
+  </product>  
+
+</products>
