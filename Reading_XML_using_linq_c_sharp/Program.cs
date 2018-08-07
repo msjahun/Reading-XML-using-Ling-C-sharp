@@ -15,12 +15,19 @@ namespace Reading_XML_using_linq_c_sharp
 
             XDocument xdoc = XDocument.Load(xmlDocPath);
             addingNewXMLelements( xdoc, xmlDocPath);
-            updatingValueOfXMLelement(xdoc, xmlDocPath);
+           // updatingValueOfXMLelement(xdoc, xmlDocPath);
+            //removeXMLelement( xdoc, xmlDocPath);
             readingXMLFileWithCondition(xdoc);
-            readingXMLFileWithoutCondition(xdoc);
+           // readingXMLFileWithoutCondition(xdoc);
             Console.ReadLine();
 
         }
+        public static void removeXMLelement(XDocument xdoc, String xmlDocPath)
+        {
+            xdoc.Root.Elements().Where(x => x.Attribute("id").Value == "105").FirstOrDefault().Remove();
+            xdoc.Save(xmlDocPath);
+        }
+
         public static void updatingValueOfXMLelement(XDocument xdoc, String xmlDocPath)
         {
             xdoc.Element("products")
