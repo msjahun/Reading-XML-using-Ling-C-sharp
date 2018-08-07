@@ -14,14 +14,24 @@ namespace Reading_XML_using_linq_c_sharp
             String xmlDocPath = "..\\..\\..\\database\\products.xml";
 
             XDocument xdoc = XDocument.Load(xmlDocPath);
-            addingNewXMLelements( xdoc, xmlDocPath);
-           // updatingValueOfXMLelement(xdoc, xmlDocPath);
+            // addingNewXMLelements( xdoc, xmlDocPath);
+       //      updatingValueOfXMLelement(xdoc, xmlDocPath);
             //removeXMLelement( xdoc, xmlDocPath);
-            readingXMLFileWithCondition(xdoc);
-           // readingXMLFileWithoutCondition(xdoc);
-            Console.ReadLine();
+        //  readingXMLFileWithCondition(xdoc);
+            // readingXMLFileWithoutCondition(xdoc);
+           // removeAllXMLelements(xdoc, xmlDocPath);
+       
+
+                Console.ReadLine();
 
         }
+
+        public static void removeAllXMLelements(XDocument xdoc, String xmlDocPath)
+        {
+            xdoc.Root.Elements().Remove();
+            xdoc.Save(xmlDocPath);
+        }
+
         public static void removeXMLelement(XDocument xdoc, String xmlDocPath)
         {
             xdoc.Root.Elements().Where(x => x.Attribute("id").Value == "105").FirstOrDefault().Remove();
