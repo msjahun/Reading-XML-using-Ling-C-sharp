@@ -18,18 +18,6 @@
   </product>
   <product id="105">
     <name>new product</name>
-    <price currency="USD">2899</price>
-  </product>
-  <product id="105">
-    <name>new product</name>
-    <price currency="USD">5000</price>
-  </product>
-  <product id="105">
-    <name>new product</name>
-    <price currency="USD">5000</price>
-  </product>
-  <product id="105">
-    <name>new product</name>
     <price currency="USD">5000</price>
   </product>
 </products>
